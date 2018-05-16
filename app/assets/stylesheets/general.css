@@ -1,0 +1,93 @@
+body {
+  background: #eee;
+}
+header {
+  background: #fff;
+}
+.content-wrapper {
+  width: 1100px;
+  position: relative;
+}
+.center {
+  margin: 0px auto;
+}
+.block {
+  display: block;
+  width: 100%;
+}
+.top-gap-1 {
+  margin-top: 10px !important;
+}
+.bottom-gap-1 {
+  margin-bottom: 10px !important;
+}
+.left-gap-1 {
+  margin-left: 10px !important;
+}
+.right-gap-1 {
+  margin-right: 10px !important;
+}
+.top-gap-2 {
+  margin-top: 20px !important;
+}
+.bottom-gap-2 {
+  margin-bottom: 20px !important;
+}
+.left-gap-2 {
+  margin-left: 20px !important;
+}
+.right-gap-2 {
+  margin-right: 20px !important;
+}
+.top-gap-3 {
+  margin-top: 30px !important;
+}
+.bottom-gap-3 {
+  margin-bottom: 30px !important;
+}
+.left-gap-3 {
+  margin-left: 30px !important;
+}
+.right-gap-3 {
+  margin-right: 30px !important;
+}
+.card {
+  background: #FFFFFF;
+  box-shadow: 0 3px 14px 0 rgba(55,33,11,0.20);
+  border-radius: 4px;
+}
+/* text */
+.hover-text-red:hover {
+  color: #D0021B;
+}
+.hover-border-bottom-red.sm:hover {
+  border-bottom: 1px solid #ED222E;
+}
+.hover-border-bottom-red.md:hover {
+  border-bottom: 2px solid #ED222E;
+}
+.hover-border-bottom-red.bg:hover {
+  border-bottom: 4px solid #ED222E;
+}
+.relative {
+  position: relative;
+}
+/* flex layout */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex-spacer {
+  flex-grow: 1;
+}
+
+/*form-control*/
+input.form-control {
+  background: #F4F4F4;
+  border: 1px solid #DEDEDE;
+  border-radius: 2px;
+  display: block;
+  font-size: 12px;
+  padding:5px;
+  width:100%;
+}

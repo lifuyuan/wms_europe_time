@@ -1,0 +1,41 @@
+.header-a {
+  padding: 5px;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  border-bottom: 4px solid #fff;
+}
+#login-panel {
+  position: absolute;
+  top: 46px;
+  z-index: 1;
+  padding: 20px;
+  right: 0px;
+  width: 240px;
+}
+#sec-bot {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background: rgba(255,255,255,0.2);
+}
+.news {
+  padding: 35px 0px;
+}
+.news .icon {
+  width: 40px;
+}
+.news .title {
+  font-size: 18px;
+  color: #08061E;
+  letter-spacing: -0.16px;
+  flex-grow: 1;
+  padding-left:30px;
+}
+.news .date {
+  font-size: 18px;
+  color: #08061E;
+  letter-spacing: -0.16px;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}

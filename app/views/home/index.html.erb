@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "init" %>
+    <%= stylesheet_link_tag "general" %>
+    <%= stylesheet_link_tag "http://cdn.w3schools.wang/w3.css" %>
+    <style>
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="content-wrapper flex center">
+        <div style="height:24px"><img class="block" src="/assets/logo.png"></div>
+        <div class="flex-spacer"></div>
+        <div style="margin-top:18px">
+          <ul>
+            <li><a class="header-a hover-text-red hover-border-bottom-red bg">首页</a></li>
+            <li class="left-gap-3"><a class="header-a hover-text-red hover-border-bottom-red bg">产品服务</a></li>
+            <li class="left-gap-3"><a class="header-a hover-text-red hover-border-bottom-red bg">关于我们</a></li>
+            <li class="left-gap-3"><a class="header-a hover-text-red hover-border-bottom-red bg">联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="relative">
+      <div class="content-wrapper center">
+        <div id="login-panel" class="card">
+          <div><span style="font-size: 12px; color: #08061E; letter-spacing: 0.36px; padding-bottom: 10px; border-bottom: 1px solid #D0021B; display: inline-block">账号登录</span></div>
+          <div class="top-gap-3">
+            <input class="form-control" placeholder="邮箱">
+          </div>
+          <div class="top-gap-2">
+            <input class="form-control" placeholder="密码">
+          </div>
+          <div class="top-gap-2">
+            <button class="w3-btn w3-round w3-red block" style="font-size:12px">登录</button>
+          </div>
+          <div class="top-gap-1">
+            <a style="font-size: 9px; color: #999999; letter-spacing: 0.27px;">忘记密码？</a>
+            <div style="display: inline-block;font-size: 12px;color: #08061E;letter-spacing: 0.27px;margin-left: 46px;"><input type="checkbox">下次自动登录</div>
+          </div>
+          <div class="top-gap-2"></div>
+        </div>
+      </div>
+      <div class="w3-display-container" style="max-height: 550px; overflow: hidden; min-width: 1100px">
+        <img class="mySlides w3-animate-top" src="/assets/bg.png" style="width:100%">
+      </div>
+      <div id="sec-bot">
+        <div class="content-wrapper center flex" style="justify-content: space-between;">
+          <div style="padding: 30px 0px">
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+          </div>
+          <div style="padding: 30px 0px">
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+          </div>
+          <div style="padding: 30px 0px">
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+          </div>
+          <div style="padding: 30px 0px">
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div style="border-bottom: 1px solid #eee;background: #fff;">
+        <a class="news flex content-wrapper center" style="justify-content: space-between;">
+          <span class="icon"><img src="/assets/icon2.png"></span>
+          <span class="title">关于近期“奶粉专线”和“阳光包税”包裹清关时效和恢复国际物流段信息查询声明</span>
+          <span class="date">2018-03-25</span>
+        </a>
+      </div>
+      <div style="border-bottom: 1px solid #eee;background: #fff;">
+        <a class="news flex content-wrapper center" style="justify-content: space-between;">
+          <span class="icon"></span>
+          <span class="title">关于近期“奶粉专线”和“阳光包税”包裹清关时效和恢复国际物流段信息查询声明</span>
+          <span class="date">2018-03-25</span>
+        </a>
+      </div>
+      <div style="border-bottom: 1px solid #eee;background: #fff;">
+        <a class="news flex content-wrapper center" style="justify-content: space-between;">
+          <span class="icon"></span>
+          <span class="title">关于近期“奶粉专线”和“阳光包税”包裹清关时效和恢复国际物流段信息查询声明</span>
+          <span class="date">2018-03-25</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="top-gap-3">
+      <div class="content-wrapper center" style="text-align:center;font-size: 14px;color: #5B5B5B;letter-spacing: 0.42px;">
+        <a class="top-gap-2 right-gap-3">首页</a>
+        <a class="top-gap-2 right-gap-3">产品服务</a>
+        <a class="top-gap-2 right-gap-3">关于我们</a>
+        <a>联系我们</a>
+      </div>
+    </footer>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 5000);
+    }
+    </script>
+  </body>
+</html>
