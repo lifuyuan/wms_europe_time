@@ -1,15 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <title>WmsEuropeTime</title>
+    <title>Wms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <link rel="icon" href="data:image/ico;base64,aWNv">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= yield :stylesheets %>
 
+  </head>
   <body>
-    <%= yield %>
+    <div>
+      <%= render 'layouts/menu'%>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :javascripts%>
   </body>
 </html>
+

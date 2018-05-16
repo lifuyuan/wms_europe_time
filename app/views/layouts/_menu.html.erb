@@ -1,0 +1,43 @@
+<div class="sidebar">
+	<div class="wrapper">
+
+		<a href="" class="logo"><%= image_tag("logo1.png",  :class => "img-responsive", :alt => "europeTime" ) %></a>
+		<div class="clearfix"></div>
+
+		<ul class="nav-side" id="nav-side">
+
+			<li id="home-link">
+				<%= link_to root_path do %><span class="glyphicon glyphicon-dashboard"></span>a<% end %>
+			</li>
+			<li id="in-out-link">
+				<a href=""><span class="glyphicon glyphicon-shopping-cart"></span>b</a>
+				<ul class="second-nav-side">
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>c<% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>d><% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>e<% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>f<% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>g<% end %></li>
+				</ul>
+			</li>
+
+			<li id="inventory-link">
+				<%= link_to "#" do %><span class="glyphicon glyphicon-gift"></span>h<% end %>
+
+			</li>
+
+			<li id="commodity-link">
+				<a href=""><span class="glyphicon glyphicon-calendar"></span>i</a>
+				<ul class="second-nav-side">
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>j<% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>k<% end %></li>
+					<li><%= link_to "#" do %><span class="glyphicon glyphicon-chevron-right"></span>l<% end %></li>
+				</ul>
+			</li>
+
+
+
+
+		</ul>
+
+	</div>
+</div>

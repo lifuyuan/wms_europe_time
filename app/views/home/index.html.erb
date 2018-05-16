@@ -4,11 +4,10 @@
     <title>WMS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag "init" %>
-    <%= stylesheet_link_tag "general" %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "http://cdn.w3schools.wang/w3.css" %>
-    <style>
-    </style>
   </head>
   <body>
 
@@ -30,12 +29,16 @@
     <section class="relative">
       <div class="content-wrapper center">
         <div id="login-panel" class="card">
+          <% unless flash[:notice].blank? %>
+            <div class="alert alert-info" style="font-size: 12px; padding: 5px;margin-bottom: 10px;"><%= flash[:notice] %></div>
+          <% end -%>
           <div><span style="font-size: 12px; color: #08061E; letter-spacing: 0.36px; padding-bottom: 10px; border-bottom: 1px solid #D0021B; display: inline-block">账号登录</span></div>
+          <%= form_tag sessions_path, method: :post do%>
           <div class="top-gap-3">
-            <input class="form-control" placeholder="邮箱">
+            <%= text_field_tag :email, nil, placeholder: "邮箱", class: "form-control"%>
           </div>
           <div class="top-gap-2">
-            <input class="form-control" placeholder="密码">
+            <%= password_field_tag :password, nil, placeholder: "邮箱", class: "form-control"%>
           </div>
           <div class="top-gap-2">
             <button class="w3-btn w3-round w3-red block" style="font-size:12px">登录</button>
@@ -44,11 +47,17 @@
             <a style="font-size: 9px; color: #999999; letter-spacing: 0.27px;">忘记密码？</a>
             <div style="display: inline-block;font-size: 12px;color: #08061E;letter-spacing: 0.27px;margin-left: 46px;"><input type="checkbox">下次自动登录</div>
           </div>
+          <% end -%>
           <div class="top-gap-2"></div>
         </div>
       </div>
       <div class="w3-display-container" style="max-height: 550px; overflow: hidden; min-width: 1100px">
         <img class="mySlides w3-animate-top" src="/assets/bg.png" style="width:100%">
+        <!--
+        <img class="mySlides w3-animate-top" src="/assets/bg.png" style="width:100%">
+        <img class="mySlides w3-animate-top" src="/assets/bg.png" style="width:100%">
+        <img class="mySlides w3-animate-top" src="/assets/bg.png" style="width:100%">
+      	-->
       </div>
       <div id="sec-bot">
         <div class="content-wrapper center flex" style="justify-content: space-between;">
@@ -56,13 +65,13 @@
             <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
           </div>
           <div style="padding: 30px 0px">
-            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">模组需求定制话</span>
           </div>
           <div style="padding: 30px 0px">
-            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">海量数据支持</span>
           </div>
           <div style="padding: 30px 0px">
-            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">欧洲多地大仓</span>
+            <img src="/assets/icon1.png"> <span style="font-size: 16px;color: #FFFFFF;letter-spacing: 0.48px;display: inline-block;margin-left: 17px;position: relative;top: 8px;">高稳定性系统</span>
           </div>
         </div>
       </div>
