@@ -13,11 +13,9 @@
 
   </head>
   <body>
-    <div>
-      <%= render 'layouts/menu'%>
-      <div id="content">
-        <%= yield %>
-      </div>
+    <%= render 'layouts/menu'%>
+    <div id="content">
+      <%= yield %>
     </div>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

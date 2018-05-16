@@ -1,4 +1,6 @@
 module SessionsHelper
+
+	# 登录方法
 	def self.login(email, password)
 		json_res = nil
 		response = WebFunctions.method_url_call("post", 
@@ -8,6 +10,17 @@ module SessionsHelper
 				"grant_type": "password", 
 				"username": email, 
 				"password": password})
+		if response[0] == "200"
+			json_res = JSON.parse(response[1])
+		end
+		return json_res
+	end
+
+	# 获取用户信息
+	def self.get_account_info(account_id)
+		json_res = nil
+		response = WebFunctions.method_url_call("get", 
+			"http://47.96.153.174:9050/api/v1.0/accounts/#{account_id}/show")
 		if response[0] == "200"
 			json_res = JSON.parse(response[1])
 		end
