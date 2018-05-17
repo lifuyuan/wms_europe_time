@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 		# 获取token信息
 		if token_info = SessionsHelper.login(params[:email], params[:password])
 			# 获取用户信息
-			if account_info = SessionsHelper.get_account_info("1")
+			if account_info = SessionsHelper.get_account_info(token_info["access_token"])
 				flash[:notice] = "登录成功"
 				session[:access_token] = token_info["access_token"]
 				session[:toeen_expires_in] = token_info["expires_in"]
-				session[:account] = account_info["data"]
+				session[:account] = account_info["account"]
 			else
 				flash[:notice] = "获取用户信息失败，请联系客服"
 			end

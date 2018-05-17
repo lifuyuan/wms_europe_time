@@ -17,10 +17,10 @@ module SessionsHelper
 	end
 
 	# 获取用户信息
-	def self.get_account_info(account_id)
+	def self.get_account_info(access_token)
 		json_res = nil
 		response = WebFunctions.method_url_call("get", 
-			"http://47.96.153.174:9050/api/v1.0/accounts/#{account_id}/show")
+			"http://47.96.153.174:9050/oauth2/current_account?access_token=#{access_token}")
 		if response[0] == "200"
 			json_res = JSON.parse(response[1])
 		end
